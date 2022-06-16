@@ -1,0 +1,16 @@
+name: splinedist-experiments
+channels:
+  - conda-forge
+dependencies:
+  - python=3.9
+  - scikit-image=0.19
+  - black
+  - ca-certificates
+  - openssl
+  - opencv=4.5
+  - pip=22.1
+  - pip:
+    - csbdeep
+    - gputools
+    - tensorflow
+    - stardist==0.6.2
