@@ -1,4 +1,4 @@
-name: splinedist-experiments
+name: splinedist-starter
 channels:
   - conda-forge
 dependencies:
@@ -16,4 +16,3 @@ dependencies:
   - pip:
     - csbdeep
     - gputools
-    - stardist==0.6.2
