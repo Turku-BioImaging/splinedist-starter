@@ -59,11 +59,11 @@ print("- training:       %3d" % len(X_trn))
 print("- validation:     %3d" % len(X_val))
 
 # choose the number of control points (M)
-M = 8
+M = 32
 n_params = 2 * M
 
 # Predict on subsampled grid for increased efficiency and larger field of view
-grid = (2, 2)
+grid = (4, 4)
 
 # compute the size of the largest contour present in the image-set
 contoursize_max = get_contoursize_max(Y_trn)
@@ -80,11 +80,9 @@ vars(conf)
 phi_generator(M, conf.contoursize_max)
 grid_generator(M, conf.train_patch_size, conf.grid)
 
-model = SplineDist2D(conf, name="splinedist", basedir="models")
+model = SplineDist2D(conf, name="splinedist01", basedir="models")
 
 # Data augmentation
-
-
 def random_fliprot(img, mask):
     assert img.ndim >= mask.ndim
     axes = tuple(range(mask.ndim))
@@ -118,5 +116,5 @@ def augmenter(x, y):
 
 # Training
 model.train(
-    X_trn, Y_trn, validation_data=(X_val, Y_val), augmenter=augmenter, epochs=300
+    X_trn, Y_trn, validation_data=(X_val, Y_val), augmenter=augmenter, epochs=150
 )
