@@ -26,12 +26,8 @@ python train.py
 1. Make predictions `python predict.py`
 
 ## About Turku BioImaging
-
-<img src="tbi_logo.png" alt="drawing" width="250"/>
-
-
 Turku BioImaging (TBI) is a broad-based, interdisciplinary science and infrastructure umbrella that aims to unite bioimaging expertise in Turku and elsewhere in Finland.
 
 TBI is jointly operated by the University of Turku and Åbo Akademi University. TBI manages Euro-BioImaging Finland, coordinates funding acquisition for imaging instrumentation and services, operates an international MSc program in biomedical imaging, and develops new imaging-related services (e.g. image data and multimedia). TBI-associated imaging facilities provide open access services ranging from molecular and cellular imaging and high content analysis to whole animal and human imaging. TBI is led by a tripartite management team, and has a broad-based Steering Committee.
 
-[Turku BioImaging Website](https://bioimaging.fi)
+[Turku BioImaging Website](https://bioimaging.fi) | [Åbo Akademi University](https://abo.fi) | [University of Turku](https://utu.fi)
