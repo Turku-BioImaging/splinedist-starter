@@ -1,4 +1,3 @@
-# Cell Segmentation with SplineDist
 <img src="tbi_logo.png" alt="drawing" width="250"/>
 
 This is a starter repository for trying out [SplineDist](https://github.com/uhlmanngroup/splinedist) in a clean Python environment.
