@@ -1,4 +1,5 @@
 import sys
+import os
 import numpy as np
 
 from glob import glob
@@ -21,29 +22,41 @@ import os
 
 os.environ["CUDA_VISIBLE_DEVICES"] = ""
 
+# # Load Data
+# X = sorted(glob("data/test/images/*.tif"))
+# X = list(map(imread, X))
+
+# n_channel = 1 if X[0].ndim == 2 else X[0].shape[-1]
+# axis_norm = (0, 1)  # normalize channels independently
+# # axis_norm = (0,1,2) # normalize channels jointly
+# if n_channel > 1:
+#     print(
+#         "Normalizing image channels %s."
+#         % ("jointly" if axis_norm is None or 2 in axis_norm else "independently")
+#     )
+
+# # Load trained model
+# model = SplineDist2D(None, name="splinedist01", basedir="models")
+
+# # Prediction
+# # img = normalize(X[16], 1, 99.8, axis=axis_norm)
+# # labels, details = model.predict_instances(img)
+
+# for i in enumerate(X):
+#     img = normalize(i[1], 1, 99.8, axis=axis_norm)
+#     labels, details = model.predict_instances(img)
+#     # save_tiff_imagej_compatible(labels, "data/test/predictions/%d.tif" % i[0])
+#     io.imsave("data/test/predictions/00.tif", labels, check_contrast=False)
+#     break
+
 # Load Data
 X = sorted(glob("data/test/images/*.tif"))
-X = list(map(imread, X))
-
-n_channel = 1 if X[0].ndim == 2 else X[0].shape[-1]
-axis_norm = (0, 1)  # normalize channels independently
-# axis_norm = (0,1,2) # normalize channels jointly
-if n_channel > 1:
-    print(
-        "Normalizing image channels %s."
-        % ("jointly" if axis_norm is None or 2 in axis_norm else "independently")
-    )
 
 # Load trained model
-model = SplineDist2D(None, name="splinedist01", basedir="models")
+model = SplineDist2D(None, name="splinedist01", basedir="models"
 
-# Prediction
-# img = normalize(X[16], 1, 99.8, axis=axis_norm)
-# labels, details = model.predict_instances(img)
-
-for i in enumerate(X):
-    img = normalize(i[1], 1, 99.8, axis=axis_norm)
-    labels, details = model.predict_instances(img)
-    # save_tiff_imagej_compatible(labels, "data/test/predictions/%d.tif" % i[0])
-    io.imsave("data/test/predictions/00.tif", labels, check_contrast=False)
-    break
+for i in tqdm(enumerate(X)):
+    img = io.imread(i)
+    labels, _ = model.predict_instances(img)
+    pred_fname = i.replace('.tif', '_mask.tif')
+    io.imsave(pred_fname, labels, check_contrast = False)

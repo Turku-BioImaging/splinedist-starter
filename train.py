@@ -24,9 +24,9 @@ import os
 
 os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 
+# Set the training images and corresponding masks
 X = sorted(glob("data/Fluo-N2DL-HeLa/train/images/*.tif"))
 Y = sorted(glob("data/Fluo-N2DL-HeLa/train/masks/*.tif"))
-# assert all(Path(x).name == Path(y).name for x, y in zip(X, Y))
 assert len(X) == len(Y)
 
 X = list(map(imread, X))
