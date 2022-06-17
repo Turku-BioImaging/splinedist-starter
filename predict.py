@@ -40,8 +40,8 @@ if n_channel > 1:
 model = SplineDist2D(None, name="splinedist01", basedir="models")
 
 # Prediction
-for idx, i in enumerate(X):
-    img = normalize(i[1], 1, 99.8, axis=axis_norm)
+for idx, i in tqdm(enumerate(X), total=len(X)):
+    img = normalize(i, 1, 99.8, axis=axis_norm)
     labels, _ = model.predict_instances(img)
     fname = os.path.basename(paths[idx])
     io.imsave(f"predictions/{fname}", labels, check_contrast=False)
