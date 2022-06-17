@@ -32,5 +32,6 @@ python train.py
 
 Turku BioImaging (TBI) is a broad-based, interdisciplinary science and infrastructure umbrella that aims to unite bioimaging expertise in Turku and elsewhere in Finland.
 
-Turku BioImaging is jointly operated by the University of Turku and Åbo Akademi University. TBI manages Euro-BioImaging Finland, coordinates funding acquisition for imaging instrumentation and services, operates an international MSc program in biomedical imaging, and develops new imaging-related services (e.g. image data and multimedia). TBI-associated imaging facilities provide open access services ranging from molecular and cellular imaging and high content analysis to whole animal and human imaging. TBI is led by a tripartite management team, and has a broad-based Steering Committee.
-[Website](https://bioimaging.fi)
+TBI is jointly operated by the University of Turku and Åbo Akademi University. TBI manages Euro-BioImaging Finland, coordinates funding acquisition for imaging instrumentation and services, operates an international MSc program in biomedical imaging, and develops new imaging-related services (e.g. image data and multimedia). TBI-associated imaging facilities provide open access services ranging from molecular and cellular imaging and high content analysis to whole animal and human imaging. TBI is led by a tripartite management team, and has a broad-based Steering Committee.
+
+[Turku BioImaging Website](https://bioimaging.fi)
