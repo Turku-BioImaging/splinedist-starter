@@ -24,8 +24,8 @@ import os
 
 os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 
-X = sorted(glob("data/train/images/*.tif"))
-Y = sorted(glob("data/train/masks/*.tif"))
+X = sorted(glob("data/Fluo-N2DL-HeLa/train/images/*.tif"))
+Y = sorted(glob("data/Fluo-N2DL-HeLa/train/masks/*.tif"))
 # assert all(Path(x).name == Path(y).name for x, y in zip(X, Y))
 assert len(X) == len(Y)
 
@@ -59,7 +59,7 @@ print("- training:       %3d" % len(X_trn))
 print("- validation:     %3d" % len(X_val))
 
 # choose the number of control points (M)
-M = 32
+M = 16
 n_params = 2 * M
 
 # Predict on subsampled grid for increased efficiency and larger field of view
