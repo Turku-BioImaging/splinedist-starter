@@ -1,5 +1,7 @@
-# Cell Segmentation with SplineDist
 <img src="tbi_logo.png" alt="drawing" width="250"/>
+
+# Cell Segmentation with SplineDist
+
 
 ## Installation
 Use either [conda](https://docs.conda.io/en/latest/miniconda.html) or [mamba](https://github.com/mamba-org/mamba) as the package manager.
