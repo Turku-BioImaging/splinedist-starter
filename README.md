@@ -1,11 +1,13 @@
 <img src="tbi_logo.png" alt="drawing" width="250"/>
 
+# Cell Segmentation with SplineDist
+
 This is a starter repository for trying out [SplineDist](https://github.com/uhlmanngroup/splinedist) in a clean Python environment.
 
 SplineDist is a machine-learning framework created for the purpose of cell segmentation using spline curves. It was meant to improve on the limitation of StarDist to only star-convex polygons by using spline curves instead of radial distances. The [manuscript](https://www.biorxiv.org/content/10.1101/2020.10.27.357640v1) was accepted at [ISBI 2021](https://biomedicalimaging.org/2021/).
 
-
-## Installation
+## Usage
+### Installation
 Use either [conda](https://docs.conda.io/en/latest/miniconda.html) or [mamba](https://github.com/mamba-org/mamba) as the package manager.
 1. Clone this repository
 ```
@@ -13,20 +15,20 @@ mamba env create -f environment.yml
 mamba activate splinedist-starter
 ```
 
-## Training
+### Training
 1. Place training images and masks in `data/train/images` and `data/train/masks`
 ```
 mamba activate splinedist-starter
 python train.py
 ```
 
-## Prediction
+### Prediction
 1. Make predictions `python predict.py`
-<hr>
+
+## About Turku BioImaging
 
 <img src="tbi_logo.png" alt="drawing" width="250"/>
 
-## Turku BioImaging
 
 Turku BioImaging (TBI) is a broad-based, interdisciplinary science and infrastructure umbrella that aims to unite bioimaging expertise in Turku and elsewhere in Finland.
 
